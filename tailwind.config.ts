@@ -127,10 +127,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.7s ease-out forwards',
-				'slide-up': 'slide-up 0.7s ease-out forwards',
-				'slide-down': 'slide-down 0.7s ease-out forwards',
-				'slide-in-right': 'slide-in-right 0.7s ease-out forwards'
+				'fade-in': 'fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'slide-up': 'slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'slide-down': 'slide-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'slide-in-right': 'slide-in-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards'
 			},
 			backgroundImage: {
 				'hero-pattern': "linear-gradient(rgba(0, 87, 183, 0.85), rgba(0, 87, 183, 0.85)), url('/hero-bg.jpg')",

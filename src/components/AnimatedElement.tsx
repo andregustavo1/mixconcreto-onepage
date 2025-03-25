@@ -7,12 +7,14 @@ interface AnimatedElementProps {
   animation?: 'fade-in' | 'slide-up' | 'slide-down' | 'slide-in-right';
   delay?: number;
   className?: string;
+  duration?: number;
 }
 
 const AnimatedElement = ({ 
   children, 
   animation = 'fade-in', 
   delay = 0,
+  duration = 800,
   className = '' 
 }: AnimatedElementProps) => {
   const elementRef = useRef<HTMLDivElement>(null);
@@ -26,6 +28,7 @@ const AnimatedElement = ({
               if (elementRef.current) {
                 elementRef.current.classList.add(`animate-${animation}`);
                 elementRef.current.style.opacity = '1';
+                elementRef.current.style.transition = `opacity ${duration}ms ease-out`;
               }
             }, delay);
             observer.unobserve(entry.target);
@@ -44,13 +47,16 @@ const AnimatedElement = ({
         observer.unobserve(elementRef.current);
       }
     };
-  }, [animation, delay]);
+  }, [animation, delay, duration]);
   
   return (
     <div 
       ref={elementRef} 
       className={cn('opacity-0', className)}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{ 
+        animationDelay: `${delay}ms`, 
+        animationDuration: `${duration}ms` 
+      }}
     >
       {children}
     </div>
