@@ -1,6 +1,6 @@
 
 import AnimatedElement from './AnimatedElement';
-import { FileText, Flask, Calendar, Truck, HardHat } from 'lucide-react';
+import { FileText, Beaker, Calendar, Truck, HardHat } from 'lucide-react';
 
 const WorkProcess = () => {
   const steps = [
@@ -10,7 +10,7 @@ const WorkProcess = () => {
       description: 'Avaliação do tipo de concreto e volume necessário para sua obra.'
     },
     {
-      icon: <Flask className="w-12 h-12 text-minermix-yellow" />,
+      icon: <Beaker className="w-12 h-12 text-minermix-yellow" />,
       title: 'Dosagem Técnica',
       description: 'Definição da mistura ideal para atender às especificações técnicas.'
     },
