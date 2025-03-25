@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// MinerMix custom colors
+				'minermix-yellow': '#FFD700',
+				'minermix-blue': '#0057B7',
+				'minermix-red': '#E31937',
+				'minermix-white': '#FFFFFF',
+				'minermix-light-gray': '#F5F5F5',
+				'minermix-dark-gray': '#333333',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +82,59 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(40px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-down': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(-40px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in-right': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(40px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.7s ease-out forwards',
+				'slide-up': 'slide-up 0.7s ease-out forwards',
+				'slide-down': 'slide-down 0.7s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.7s ease-out forwards'
+			},
+			backgroundImage: {
+				'hero-pattern': "linear-gradient(rgba(0, 87, 183, 0.85), rgba(0, 87, 183, 0.85)), url('/hero-bg.jpg')",
+				'cta-pattern': "linear-gradient(rgba(255, 215, 0, 0.85), rgba(255, 215, 0, 0.85)), url('/cta-bg.jpg')",
 			}
 		}
 	},
