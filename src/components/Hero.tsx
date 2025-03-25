@@ -1,14 +1,19 @@
-
 import AnimatedElement from './AnimatedElement';
 
 const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center bg-hero-pattern bg-cover bg-center py-32"
+      className="relative min-h-screen flex items-center bg-hero-pattern bg-cover bg-center py-32"
       style={{ paddingTop: '7rem' }}
     >
-      <div className="container">
+      <img 
+        src="/images/image1.png" 
+        alt="" 
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+      <div className="container relative z-10">
         <div className="max-w-3xl">
           <AnimatedElement animation="slide-down">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">

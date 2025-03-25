@@ -59,7 +59,7 @@ const About = () => {
           <AnimatedElement animation="slide-in-right">
             <div className="relative rounded-lg overflow-hidden shadow-xl h-[500px]">
               <img 
-                src="/concrete-pour.jpg" 
+                src="https://img.freepik.com/free-photo/pouring-concrete-as-foundation_23-2151933441.jpg?t=st=1742914544~exp=1742918144~hmac=3578fb2b9a84a844d7126e71954bbcaa94c46154b205b3a848be1e4ab5b942b4&w=900" 
                 alt="Concreto de alta qualidade sendo despejado" 
                 className="w-full h-full object-cover"
               />

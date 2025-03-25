@@ -10,27 +10,27 @@ const Products = () => {
     {
       title: 'Fundações e Baldrames',
       description: 'Concreto especial para fundações, com alta resistência e impermeabilidade.',
-      image: '/foundation-concrete.jpg'
+      image: '/images/image2.png'
     },
     {
       title: 'Lajes e Vigas',
       description: 'Formulação específica para elementos estruturais, com resistência otimizada para cargas.',
-      image: '/slab-concrete.jpg'
+      image: '/images/image4.png'
     },
     {
       title: 'Pisos Industriais Polidos',
       description: 'Concreto de alta performance para áreas de tráfego intenso, com acabamento polido.',
-      image: '/polished-floor.jpg'
+      image: '/images/image5.png'
     },
     {
       title: 'Concreto Projetado',
       description: 'Solução avançada para aplicações especiais, com técnica de projeção de concreto.',
-      image: '/projected-concrete.jpg'
+      image: '/images/image3.png'
     },
     {
       title: 'Concreto com Fibras',
       description: 'Reforçado com fibras para maior resistência à tração e controle de fissuras.',
-      image: '/fiber-concrete.jpg'
+      image: '/images/image6.png'
     }
   ];
   
