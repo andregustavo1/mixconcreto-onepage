@@ -1,5 +1,6 @@
 
 import { useEffect, useRef, ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface AnimatedElementProps {
   children: ReactNode;
@@ -22,7 +23,10 @@ const AnimatedElement = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add(animation);
+              if (elementRef.current) {
+                elementRef.current.classList.add(`animate-${animation}`);
+                elementRef.current.style.opacity = '1';
+              }
             }, delay);
             observer.unobserve(entry.target);
           }
@@ -45,7 +49,7 @@ const AnimatedElement = ({
   return (
     <div 
       ref={elementRef} 
-      className={`opacity-0 ${className}`}
+      className={cn('opacity-0', className)}
       style={{ animationDelay: `${delay}ms` }}
     >
       {children}
