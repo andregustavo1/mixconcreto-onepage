@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import AnimatedElement from './AnimatedElement';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -31,8 +30,38 @@ const Products = () => {
       title: 'Concreto com Fibras',
       description: 'Reforçado com fibras para maior resistência à tração e controle de fissuras.',
       image: '/images/image6.png'
-    }
+    },
+    {
+      title: 'Outros Serviços',
+      description: 'Outros Serviços.',
+      image: 'images/1.mp4'
+    },
+    {
+      title: 'Outros Serviços',
+      description: 'Outros Serviços.',
+      image: 'images/2.mp4'
+    },
+    {
+      title: 'Outros Serviços',
+      description: 'Outros Serviços.',
+      image: 'images/3.mp4'
+    },
+    {
+      title: 'Outros Serviços',
+      description: 'Outros Serviços.',
+      image: 'images/4.mp4'
+    },
+    {
+      title: 'Outros Serviços',
+      description: 'Outros Serviços.',
+      image: 'images/5.mp4'
+    },
   ];
+  
+  // Helper function to check if the file is a video
+  const isVideo = (filename: string) => {
+    return filename.endsWith('.mp4') || filename.endsWith('.webm') || filename.endsWith('.mov');
+  };
   
   const nextSlide = () => {
     setActiveSlide((prev) => (prev === products.length - 1 ? 0 : prev + 1));
@@ -60,11 +89,22 @@ const Products = () => {
               {products.map((product, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <div className="relative h-96">
-                    <img 
-                      src={product.image} 
-                      alt={product.title} 
-                      className="w-full h-full object-cover"
-                    />
+                    {isVideo(product.image) ? (
+                      <video 
+                        src={product.image} 
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    ) : (
+                      <img 
+                        src={product.image} 
+                        alt={product.title} 
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-minermix-dark-gray to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                       <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
